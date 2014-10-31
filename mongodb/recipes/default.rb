@@ -19,6 +19,9 @@
 # limitations under the License.
 #
 
+Chef::Log.info("looking for the node #{node['mongodb']} and trying to see if it's there")
+Chef::Log.info("looking for the node #{node[:mongodb][:package_name]} and trying to see if it's there")
+
 package node[:mongodb][:package_name] do
   action :install
   version node[:mongodb][:package_version]
