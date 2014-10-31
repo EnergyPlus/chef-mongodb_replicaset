@@ -30,8 +30,8 @@ end
 # install the shell as well
 package node[:mongodb][:shell_name] do
   action :install
-  if node[:mongodb][:nogpg]
-    options "--nogpgcheck"
+  #if node[:mongodb][:nogpg]
+  options "--nogpgcheck"
   #version node[:mongodb][:package_version]
   0
 end
