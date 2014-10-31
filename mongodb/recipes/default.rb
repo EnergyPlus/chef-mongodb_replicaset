@@ -27,6 +27,7 @@ package node[:mongodb][:package_name] do
   action :install
   Chef::Log.info("looking for the node version of: #{node[:mongodb][:package_version]}")
   version node[:mongodb][:package_version]
+  0
 end
 
 
