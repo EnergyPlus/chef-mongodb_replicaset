@@ -77,7 +77,7 @@ when "rhel","fedora"
   default[:mongodb][:defaults_dir] = "/etc/sysconfig"
   default[:mongodb][:package_name] = "mongo-10gen-server"
   default[:mongodb][:shell_name] = "mongodb-org-shell"
-  defaulf[:mongodb][:nogpg] = true
+  default[:mongodb][:nogpg] = true
   default[:mongodb][:user] = "mongod"
   default[:mongodb][:group] = "mongod"
   default[:mongodb][:init_script_template] = "redhat-mongodb.init.erb"
