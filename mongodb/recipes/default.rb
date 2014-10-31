@@ -20,20 +20,11 @@
 #
 
 package node[:mongodb][:package_name] do
+  Chef::Log.info("JAWN")
   action :install
-  if node[:mongodb][:nogpg]
-    options "--nogpgcheck"
+  options "--nogpgcheck"
   version node[:mongodb][:package_version]
 end
-
-# # install the shell as well
-# package node[:mongodb][:shell_name] do
-#   action :install
-#   #if node[:mongodb][:nogpg]
-#   options "--nogpgcheck"
-#   #version node[:mongodb][:package_version]
-#   0
-# end
 
 
 # Create keyFile if specified
