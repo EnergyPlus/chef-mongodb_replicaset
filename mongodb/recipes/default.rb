@@ -23,12 +23,15 @@ Chef::Log.info("looking for the node #{node['mongodb']} and trying to see if it'
 Chef::Log.info("looking for the node #{node[:mongodb][:package_name]} and trying to see if it's there")
 
 package node[:mongodb][:package_name] do
+  Chef::Log.info("JAWN")
   action :install
+  Chef::Log.info("looking for the node version of: #{node[:mongodb][:package_version]}")
   version node[:mongodb][:package_version]
 end
 
 
 # Create keyFile if specified
+Chef::Log.info("keyfile jawn?: #{node[:mongodb][:key_file]}")
 if node[:mongodb][:key_file]
   file "/etc/mongodb.key" do
     owner node[:mongodb][:user]
