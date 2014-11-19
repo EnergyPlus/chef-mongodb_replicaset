@@ -26,6 +26,10 @@ package node[:mongodb][:package_name] do
   version node[:mongodb][:package_version]
 end
 
+# package node[:mongodb][:shell_name] do
+#   Chef::Log.info("JAWN")
+#   action :install
+# end
 
 # Create keyFile if specified
 if node[:mongodb][:key_file]
@@ -37,7 +41,6 @@ if node[:mongodb][:key_file]
     content node[:mongodb][:key_file]
   end
 end
-
 
 # configure default instance
 replicaset_recipe = 'mongodb::replicaset'
